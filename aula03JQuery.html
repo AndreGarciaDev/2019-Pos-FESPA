@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Aula 03 - Introdução jQuery</title>
+
+        <script src="js/jquery.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+
+        <script>
+            $(document).ready(function(){
+                alert("Funcionou!");
+
+                $("#a1").click(function() {
+                    $("body div .abas1").show(500);
+                    $("body div .abas2, .abas3").hide();
+                });  // mostrar d1
+
+                $("#a2").click(function () {
+                    $("body div .abas2").show(500);
+                    $("body div .abas1, .abas3").hide();
+                });  // mostrar d2
+
+                $("#a3").click(function () {
+                    $("body div .abas3").show(500);
+                    $("body div .abas1, .abas2").hide();
+                });  // mostrar d3
+
+                $("#a4").click(function () {
+                    $("body div div").fadeIn();
+                });  // mostrar todos os dados
+
+                $("#a5").click(function () {
+                    $("body div div").hide();
+                });  // esconder todos os dados
+
+            });  // fim do ready
+
+            
+        </script>
+        
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Introdução JQuery</h1>
+            <button class="btn btn-primary" id="a1">Aba 1</button>
+            <button class="btn btn-primary" id="a2">Aba 2</button>
+            <button class="btn btn-primary" id="a3">Aba 3</button>
+            <button class="btn btn-success" id="a4">Mostrar todos</button>
+            <button class="btn btn-warning" id="a5">Esconder todos</button>
+            <br><br><br>
+            <div class="abas1">
+                André Garcia Alves
+            </div>
+            <div class="abas2">
+                andrealvesgarcia@gmail.com
+            </div>
+            <div class="abas3">
+                Técnico em eletrônica / Professor SEED-PR
+            </div>
+        </div>
+
+
+
+    </body>
+
+</html>
